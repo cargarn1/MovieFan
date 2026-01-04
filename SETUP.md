@@ -21,8 +21,8 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 # TMDB API Key (get one free at https://www.themoviedb.org/settings/api)
 TMDB_API_KEY=your_tmdb_api_key_here
 
-# Server Port (defaults to 8001 if not set)
-PORT=8001
+# Server Port (defaults to 5001 if not set)
+PORT=5001
 ```
 
 3. **Get a TMDB API Key:**
@@ -45,9 +45,9 @@ uvicorn app.main:app --reload
 ```
 
 6. **Access the API:**
-   - API: http://localhost:8001
-   - Interactive Docs: http://localhost:8001/docs
-   - Alternative Docs: http://localhost:8001/redoc
+   - API: http://localhost:5001
+   - Interactive Docs: http://localhost:5001/docs
+   - Alternative Docs: http://localhost:5001/redoc
 
 ## Features Overview
 
@@ -67,7 +67,7 @@ uvicorn app.main:app --reload
 
 ### 1. Register a user:
 ```bash
-curl -X POST "http://localhost:8001/api/auth/register" \
+curl -X POST "http://localhost:5001/api/auth/register" \
   -H "Content-Type: application/json" \
   -d '{
     "username": "testuser",
@@ -79,25 +79,25 @@ curl -X POST "http://localhost:8001/api/auth/register" \
 
 ### 2. Login:
 ```bash
-curl -X POST "http://localhost:8001/api/auth/login" \
+curl -X POST "http://localhost:5001/api/auth/login" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "username=testuser&password=password123"
 ```
 
 ### 3. Search TMDB:
 ```bash
-curl "http://localhost:8001/api/tmdb/search?query=inception"
+curl "http://localhost:5001/api/tmdb/search?query=inception"
 ```
 
 ### 4. Import a movie (replace TOKEN with your JWT token):
 ```bash
-curl -X POST "http://localhost:8001/api/tmdb/import/27205" \
+curl -X POST "http://localhost:5001/api/tmdb/import/27205" \
   -H "Authorization: Bearer TOKEN"
 ```
 
 ### 5. Create a review:
 ```bash
-curl -X POST "http://localhost:8001/api/reviews" \
+curl -X POST "http://localhost:5001/api/reviews" \
   -H "Authorization: Bearer TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

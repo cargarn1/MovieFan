@@ -17,12 +17,12 @@ First, authenticate and get your API key:
 
 ```bash
 # Login to get JWT token
-curl -X POST "http://localhost:8001/api/auth/login" \
+curl -X POST "http://localhost:5001/api/auth/login" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "username=your_username&password=your_password"
 
 # Get or create API key
-curl -X GET "http://localhost:8001/api/zapier/api-key" \
+curl -X GET "http://localhost:5001/api/zapier/api-key" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
@@ -39,7 +39,7 @@ Response:
 Test your API key:
 
 ```bash
-curl -X GET "http://localhost:8001/api/zapier/test" \
+curl -X GET "http://localhost:5001/api/zapier/test" \
   -H "X-API-Key: your-api-key-here"
 ```
 
@@ -79,7 +79,7 @@ const authentication = {
       label: 'API URL',
       type: 'string',
       required: true,
-      default: 'http://localhost:8001',
+      default: 'http://localhost:5001',
       helpText: 'Your MovieFan API base URL'
     }
   ]
@@ -484,6 +484,6 @@ zapier push
 ## Support
 
 For issues or questions:
-- Check API docs: `http://localhost:8001/docs`
+- Check API docs: `http://localhost:5001/docs`
 - Review Zapier platform docs: https://platform.zapier.com/docs
 
