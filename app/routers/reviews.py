@@ -202,3 +202,4 @@ def delete_review(
     # Update movie's average rating
     update_movie_average_rating(db, movie_id)
 
+

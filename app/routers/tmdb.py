@@ -229,3 +229,4 @@ def get_upcoming_movies(
             detail=str(e)
         )
 
+

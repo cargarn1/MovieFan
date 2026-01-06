@@ -108,3 +108,4 @@ def get_similar_movies(
     similar = RecommendationService.get_similar_movies(db, movie_id, limit)
     return similar
 
+
