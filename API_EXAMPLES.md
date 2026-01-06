@@ -20,7 +20,7 @@ uvicorn app.main:app --reload
 ```
 
 4. **Access API docs:**
-Open http://localhost:5001/docs in your browser
+Open http://localhost:5001/docs in your browser (API runs on port 5001)
 
 ## Example API Usage
 
@@ -232,7 +232,7 @@ GET /api/tmdb/top-rated?page=1
 ```python
 import requests
 
-BASE_URL = "http://localhost:5001"
+BASE_URL = "http://localhost:5001"  # API runs on port 5001
 
 # Register
 response = requests.post(f"{BASE_URL}/api/auth/register", json={
