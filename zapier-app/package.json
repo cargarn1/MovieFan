@@ -1,0 +1,19 @@
+{
+  "name": "movie-fan-zapier",
+  "version": "1.0.0",
+  "description": "Zapier integration for MovieFan API",
+  "main": "index.js",
+  "scripts": {
+    "test": "zapier-platform test",
+    "login": "zapier-platform login",
+    "register": "zapier-platform register",
+    "push": "zapier-platform push",
+    "validate": "zapier-platform validate"
+  },
+  "dependencies": {
+    "zapier-platform-core": "18.0.6"
+  },
+  "devDependencies": {
+    "should": "^13.2.0"
+  }
+}

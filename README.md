@@ -46,9 +46,11 @@ python -m app.init_db
 uvicorn app.main:app --reload
 ```
 
-The API will be available at `http://localhost:5001`
+The API will be available at `http://localhost:8001`
 
-API documentation available at `http://localhost:5001/docs`
+API documentation available at `http://localhost:8001/docs`
+
+The frontend will run on `http://localhost:5001`
 
 ## Project Structure
 
