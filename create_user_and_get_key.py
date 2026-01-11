@@ -121,3 +121,4 @@ if __name__ == "__main__":
         print("\n✗ Failed to get API key. Please check the errors above.")
         sys.exit(1)
 
+
