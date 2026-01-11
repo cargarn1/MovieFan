@@ -13,7 +13,7 @@ python3 run.py
 
 **Expected output:**
 ```
-INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:5001 (Press CTRL+C to quit)
 INFO:     Started reloader process
 INFO:     Started server process
 INFO:     Waiting for application startup.
@@ -33,7 +33,7 @@ npm run dev
 ```
   VITE v5.0.8  ready in XXX ms
 
-  ➜  Local:   http://localhost:5001/
+  ➜  Local:   http://localhost:5000/
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 ```
@@ -43,17 +43,17 @@ npm run dev
 ## Verify Servers Are Running
 
 Open your browser and visit:
-- **Frontend:** http://localhost:5001
-- **Backend API:** http://localhost:8001
-- **API Docs:** http://localhost:8001/docs
+- **Frontend:** http://localhost:5000
+- **Backend API:** http://localhost:5001
+- **API Docs:** http://localhost:5001/docs
 
 ## Troubleshooting
 
 ### Backend won't start
 
-1. **Check if port 8001 is in use:**
+1. **Check if port 5001 is in use:**
    ```bash
-   lsof -i :8001
+   lsof -i :5001
    # If something is using it, kill it:
    kill -9 <PID>
    ```
@@ -70,9 +70,9 @@ Open your browser and visit:
 
 ### Frontend won't start
 
-1. **Check if port 8001 is in use:**
+1. **Check if port 5000 is in use:**
    ```bash
-   lsof -i :8001
+   lsof -i :5000
    # If something is using it, kill it:
    kill -9 <PID>
    ```
